@@ -1,7 +1,7 @@
 FROM alpine:edge
 
 ENV BASE_URL="https://get.helm.sh"
-ENV TAR_FILE="helm-v3.0.1-linux-amd64.tar.gz"
+ENV TAR_FILE="helm-v3.1.1-linux-amd64.tar.gz"
 
 RUN apk add --no-cache curl git ca-certificates && \
     curl -L ${BASE_URL}/${TAR_FILE} | tar xz && \
