@@ -3,7 +3,7 @@ FROM alpine:edge
 ENV BASE_URL="https://get.helm.sh"
 ENV TAR_FILE="helm-v3.1.1-linux-amd64.tar.gz"
 
-RUN apk add --no-cache curl git ca-certificates && \
+RUN apk add --no-cache curl git ca-certificates bash && \
     curl -L ${BASE_URL}/${TAR_FILE} | tar xz && \
     mv linux-amd64/helm /usr/bin/helm && \
     chmod +x /usr/bin/helm && \
